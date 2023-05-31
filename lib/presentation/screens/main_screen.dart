@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:omosa/presentation/widgets/custom_containers.dart';
 
+import '../widget_classes/custom_container_children_widget_class.dart';
+
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
