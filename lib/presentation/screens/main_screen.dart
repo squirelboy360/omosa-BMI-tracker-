@@ -18,6 +18,7 @@ class _MainScreenState extends State<MainScreen> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              ////////////
               Row(
                 children: [
                   Expanded(
@@ -26,11 +27,18 @@ class _MainScreenState extends State<MainScreen> {
                   Expanded(
                       flex: 1,
                       child: CustomContainer(
-                        child: containerChild.maleIcon(),
+                        child: containerChild.femaleIcon(),
                       )),
                 ],
+                ////////////////////
               ),
-              CustomContainer(child: containerChild.maleIcon()),
+              Row(
+                children: [
+                  Expanded(
+                      child: CustomContainer(child: containerChild.maleIcon())),
+                ],
+                ////////////////
+              ),
               Row(
                 children: [
                   Expanded(
@@ -44,6 +52,7 @@ class _MainScreenState extends State<MainScreen> {
                         child: containerChild.maleIcon(),
                       )),
                 ],
+                ////////////////
               ),
               const Row(
                 children: [
