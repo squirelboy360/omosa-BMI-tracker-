@@ -54,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
                                     });
                                   })))),
                 ],
-                ////////////////
+                ///////////////////////////
               ),
               Row(
                 children: [
@@ -71,7 +71,12 @@ class _MainScreenState extends State<MainScreen> {
                   Expanded(
                       flex: 1,
                       child: CustomContainer(
-                        child: containerChild.maleIcon(),
+                        child: containerChild
+                            .ageBoxElements(childrenExtension.ageExtension(() {
+                          setState(() {});
+                        }, () {
+                          setState(() {});
+                        })),
                       )),
                 ],
                 ////////////////

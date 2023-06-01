@@ -12,7 +12,7 @@ class _ContainerChildrenExtension {
           child: FloatingActionButton(
             elevation: 0,
             splashColor: Colors.transparent,
-            tooltip: 'add age',
+            tooltip: 'add weight',
             onPressed: () {
               functionClass.weightIncrement();
               onPressed2();
@@ -25,9 +25,43 @@ class _ContainerChildrenExtension {
           child: FloatingActionButton(
             elevation: 0,
             splashColor: Colors.transparent,
-            tooltip: 'subtract age',
+            tooltip: 'subtract weight',
             onPressed: () {
               functionClass.weightDecrement();
+              onPressed1();
+            },
+            child: const Icon(Pixel.minus),
+          ),
+        )
+      ],
+    );
+  }
+
+  Widget ageExtension(Function onPressed1, Function onPressed2) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: FloatingActionButton(
+            elevation: 0,
+            splashColor: Colors.transparent,
+            tooltip: 'add weight',
+            onPressed: () {
+              functionClass.ageIncrement();
+              onPressed2();
+            },
+            child: const Icon(Pixel.addrow),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: FloatingActionButton(
+            elevation: 0,
+            splashColor: Colors.transparent,
+            tooltip: 'subtract weight',
+            onPressed: () {
+              functionClass.ageDecrement();
               onPressed1();
             },
             child: const Icon(Pixel.minus),
