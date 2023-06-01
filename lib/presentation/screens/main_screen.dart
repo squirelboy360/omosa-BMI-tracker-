@@ -1,7 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:omosa/presentation/widgets/custom_containers.dart';
+import 'package:omosa/classes/widget_classes/screen1/custom_container_children_extension.dart';
+import 'package:omosa/presentation/widgets/screen1/custom_calc_button.dart';
+import 'package:omosa/presentation/widgets/screen1/custom_containers.dart';
 
-import '../widget_classes/custom_container_children_widget_class.dart';
+import '../../classes/functions/screen1/function_class.dart';
+import '../../classes/widget_classes/screen1/custom_container_children_widget_class.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -37,7 +41,18 @@ class _MainScreenState extends State<MainScreen> {
               Row(
                 children: [
                   Expanded(
-                      child: CustomContainer(child: containerChild.maleIcon())),
+                      child: CustomContainer(
+                          child:
+                              containerChild.heightBoxElements(CupertinoSlider(
+                                  divisions: 10.34.toInt(),
+                                  min: 10.00,
+                                  max: 300.00,
+                                  value: functionClass.heightValue.toDouble(),
+                                  onChanged: (value) {
+                                    setState(() {
+                                      functionClass.heightValue = value;
+                                    });
+                                  })))),
                 ],
                 ////////////////
               ),
@@ -46,7 +61,12 @@ class _MainScreenState extends State<MainScreen> {
                   Expanded(
                       flex: 1,
                       child: CustomContainer(
-                        child: containerChild.maleIcon(),
+                        child: containerChild.weightBoxElements(
+                            childrenExtension.weightExtension(() {
+                          setState(() {});
+                        }, () {
+                          setState(() {});
+                        })),
                       )),
                   Expanded(
                       flex: 1,
