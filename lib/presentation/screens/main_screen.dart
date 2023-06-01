@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:omosa/classes/widget_classes/screen1/custom_container_children_extension.dart';
 import 'package:omosa/presentation/widgets/screen1/custom_calc_button.dart';
 import 'package:omosa/presentation/widgets/screen1/custom_containers.dart';
-
 import '../../classes/functions/screen1/function_class.dart';
 import '../../classes/widget_classes/screen1/custom_container_children_widget_class.dart';
+
+enum Gender { male, female }
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,6 +16,8 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  Gender selectedGender = Gender.male;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,24 +27,43 @@ class _MainScreenState extends State<MainScreen> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ////////////
               Row(
                 children: [
                   Expanded(
                       flex: 1,
-                      child: CustomContainer(child: containerChild.maleIcon())),
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            selectedGender = Gender.male;
+                          });
+                        },
+                        child: CustomContainer(
+                            color: selectedGender == Gender.male
+                                ? functionClass.activeColorValue
+                                : functionClass.inActiveColorValue,
+                            child: containerChild.maleIcon()),
+                      )),
                   Expanded(
                       flex: 1,
-                      child: CustomContainer(
-                        child: containerChild.femaleIcon(),
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            selectedGender = Gender.female;
+                          });
+                        },
+                        child: CustomContainer(
+                            color: selectedGender == Gender.female
+                                ? functionClass.activeColorValue
+                                : functionClass.inActiveColorValue,
+                            child: containerChild.femaleIcon()),
                       )),
                 ],
-                ////////////////////
               ),
               Row(
                 children: [
                   Expanded(
                       child: CustomContainer(
+                          color: functionClass.inActiveColorValue,
                           child:
                               containerChild.heightBoxElements(CupertinoSlider(
                                   divisions: 10.34.toInt(),
@@ -54,13 +76,13 @@ class _MainScreenState extends State<MainScreen> {
                                     });
                                   })))),
                 ],
-                ///////////////////////////
               ),
               Row(
                 children: [
                   Expanded(
                       flex: 1,
                       child: CustomContainer(
+                        color: functionClass.inActiveColorValue,
                         child: containerChild.weightBoxElements(
                             childrenExtension.weightExtension(() {
                           setState(() {});
@@ -71,6 +93,7 @@ class _MainScreenState extends State<MainScreen> {
                   Expanded(
                       flex: 1,
                       child: CustomContainer(
+                        color: functionClass.inActiveColorValue,
                         child: containerChild
                             .ageBoxElements(childrenExtension.ageExtension(() {
                           setState(() {});

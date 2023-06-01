@@ -1,7 +1,14 @@
+import 'dart:ui';
+
+import 'package:omosa/presentation/colors/pallete.dart';
+
 class _FunctionClass {
-  double heightValue = 10.00;
+  double heightValue = 30.00;
   double weightValue = 5;
   int ageValue = 0;
+
+  Color activeColorValue = defaultBlueAlpha;
+  Color inActiveColorValue = defaultBlue;
 
   void weightIncrement() {
     weightValue++;

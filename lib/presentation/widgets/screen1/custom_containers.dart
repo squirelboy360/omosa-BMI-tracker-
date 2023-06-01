@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:omosa/presentation/colors/pallete.dart';
 
 class CustomContainer extends StatelessWidget {
-  const CustomContainer({super.key, required this.child});
+  const CustomContainer({super.key, required this.child, required this.color});
   final Widget child;
-
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,7 +11,7 @@ class CustomContainer extends StatelessWidget {
       child: Container(
         height: MediaQuery.of(context).size.height / 4,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30), color: defaultBlue),
+            borderRadius: BorderRadius.circular(30), color: color),
         child: child,
       ),
     );
