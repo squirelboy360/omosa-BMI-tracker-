@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:omosa/classes/functions/screen1/function_class.dart';
 
 class _CustomContainerChildren {
   Widget maleIcon() {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Icon(
+        Icon(
           MdiIcons.genderMale,
           size: 80,
           color: Colors.lightBlue,
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Text(
             'Male',
-            style: GoogleFonts.aBeeZee(fontSize: 25, color: Colors.white54),
+            style: TextStyle(fontSize: 18, color: Colors.white54),
           ),
         )
       ],
@@ -25,19 +24,19 @@ class _CustomContainerChildren {
   }
 
   Widget femaleIcon() {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Icon(
+        Icon(
           MdiIcons.genderFemale,
           size: 80,
           color: Colors.pinkAccent,
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Text(
             'Female',
-            style: GoogleFonts.aBeeZee(fontSize: 25, color: Colors.white54),
+            style: TextStyle(fontSize: 18, color: Colors.white54),
           ),
         )
       ],
