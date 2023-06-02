@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:omosa/presentation/colors/pallete.dart';
+import 'package:omosa/presentation/constants/colors/pallete.dart';
 import 'package:omosa/presentation/screens/main_screen.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
                 elevation: 0,
                 shape:
                     const StadiumBorder(side: BorderSide(color: Colors.white)),
-                backgroundColor: defaultBlue)),
+                backgroundColor: kDefaultBlue)),
         primaryColor: CupertinoColors.activeBlue,
       ),
       debugShowCheckedModeBanner: false,
