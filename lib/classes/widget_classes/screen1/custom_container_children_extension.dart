@@ -10,6 +10,7 @@ class _ContainerChildrenExtension {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FloatingActionButton(
+            heroTag: '0',
             elevation: 0,
             splashColor: Colors.transparent,
             tooltip: 'add weight',
@@ -23,6 +24,7 @@ class _ContainerChildrenExtension {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FloatingActionButton(
+            heroTag: '1',
             elevation: 0,
             splashColor: Colors.transparent,
             tooltip: 'subtract weight',
@@ -44,6 +46,7 @@ class _ContainerChildrenExtension {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FloatingActionButton(
+            heroTag: '2',
             elevation: 0,
             splashColor: Colors.transparent,
             tooltip: 'add weight',
@@ -51,12 +54,13 @@ class _ContainerChildrenExtension {
               functionClass.ageIncrement();
               onPressed2();
             },
-            child: const Icon(Pixel.addrow),
+            child: const Icon(Icons.add),
           ),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FloatingActionButton(
+            heroTag: '3',
             elevation: 0,
             splashColor: Colors.transparent,
             tooltip: 'subtract weight',

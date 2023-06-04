@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:omosa/classes/functions/screen1/function_class.dart';
+import 'package:omosa/presentation/constants/widgets/widgets.dart';
 
 class _CustomContainerChildren {
   Widget maleIcon() {
@@ -15,8 +16,8 @@ class _CustomContainerChildren {
         Padding(
           padding: EdgeInsets.all(8.0),
           child: Text(
-            'Male',
-            style: TextStyle(fontSize: 18, color: Colors.white54),
+            'MALE',
+            style: kDefaultTextStyle
           ),
         )
       ],
@@ -35,8 +36,8 @@ class _CustomContainerChildren {
         Padding(
           padding: EdgeInsets.all(8.0),
           child: Text(
-            'Female',
-            style: TextStyle(fontSize: 18, color: Colors.white54),
+            'FEMALE',
+            style: kDefaultTextStyle
           ),
         )
       ],
@@ -48,7 +49,7 @@ class _CustomContainerChildren {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('Height'),
+        const Text('HEIGHT',style: kDefaultTextStyle),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(
@@ -58,7 +59,7 @@ class _CustomContainerChildren {
               children: [
                 Text(
                   functionClass.heightValue.toString(),
-                  style: const TextStyle(fontSize: 50),
+                  style: kHeadStyle
                 ),
                 const Text('cm')
               ],
@@ -75,7 +76,7 @@ class _CustomContainerChildren {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('Weight'),
+        const Text('WEIGHT',style: kDefaultTextStyle),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(
@@ -85,7 +86,7 @@ class _CustomContainerChildren {
               children: [
                 Text(
                   functionClass.weightValue.toString(),
-                  style: const TextStyle(fontSize: 50),
+                  style: kHeadStyle,
                 ),
                 const Text('kg')
               ],
@@ -102,12 +103,12 @@ class _CustomContainerChildren {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('Weight'),
+        const Text('AGE',style: kDefaultTextStyle,),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
             functionClass.ageValue.toString(),
-            style: const TextStyle(fontSize: 50),
+            style:kHeadStyle
           ),
         ),
         child

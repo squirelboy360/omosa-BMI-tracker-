@@ -9,7 +9,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,6 +22,12 @@ class MyApp extends StatelessWidget {
                     const StadiumBorder(side: BorderSide(color: Colors.white)),
                 backgroundColor: kDefaultBlue)),
         primaryColor: CupertinoColors.activeBlue,
+        sliderTheme: SliderTheme.of(context).copyWith(
+          thumbShape: const RoundSliderThumbShape(elevation: 0,enabledThumbRadius: 15),
+          overlayShape: const RoundSliderOverlayShape(overlayRadius: 30.00),
+            overlayColor: Colors.red
+
+        )
       ),
       debugShowCheckedModeBanner: false,
       home: const MainScreen(),
